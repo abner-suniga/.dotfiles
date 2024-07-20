@@ -4,6 +4,7 @@ This might be one of my longest projects. The goal is to centralize all my dotfi
 
 1. Install xcode: `xcode-select --install`
 2. Clone my .dotfiles repo: `git clone https://github.com/abner-suniga/.dotfiles.git`
+3. Run install `cd .dotfiles && ./install`
 
 ## Manual settings
 
