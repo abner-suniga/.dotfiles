@@ -15,7 +15,7 @@
       ~/.fzf.zsh:
       ~/.tmux.conf: tmux.conf
       ~/.oh-my-zsh/custom: # when the link is created?
-        create: true
+        create: false
         path: oh-my-zsh/custom
 
 
