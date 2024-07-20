@@ -11,20 +11,26 @@
       ~/.config/nvim:
         create: true
         path: config/nvim
+      ~/.fzf.zsh:
       ~/.tmux.conf: tmux.conf
-      # ~/.vim: vim
-      # ~/.vimrc: vimrc
+      ~/.oh-my-zsh/custom: # when the link is created?
+        create: true
+        path: oh-my-zsh/custom
 
 
-      # - create:
-      #     - ~/downloads
-      #     - ~/.vim/undo-history
+- create:
+  - ~/repositories
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - 
-    command: ./homebrew.zsh
-    description: Installing applications with Homebrew
+    command: ./ohmyzsh_install.zsh
+    description: Installing oh my zsh
+    stdout: true
+    stderr: true
+  - 
+    command: ./homebrew_install.zsh
+    description: Installing Homebrew
     stdout: true
     stderr: true
   - 
