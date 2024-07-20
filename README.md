@@ -1,7 +1,6 @@
 # Dotfiles
 
 This might be one of my longest projects. The goal is to centralize all my dotfiles and make a new system install as easy as possible. 
-When I have a fresh machine, I just want to run `git clone` and install all my programs, dependencies, and configurations.
 
 ## TO DO
 
