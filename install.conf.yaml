@@ -36,7 +36,7 @@
     stdout: true
     stderr: true
   - command: ./nvm_install.zsh
-    description: Installing NVM
+    description: Installing NVM, Node and Global packages
     stdout: true
     stderr: true
   - command: ./vimplug_install.zsh
