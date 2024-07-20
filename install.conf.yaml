@@ -6,8 +6,12 @@
 
 - link:
       ~/.zshrc:
+      ~/.zshenv:
       ~/.gitconfig:
-      # ~/.tmux.conf: tmux.conf
+      ~/.config/nvim:
+        create: true
+        path: config/nvim
+      ~/.tmux.conf: tmux.conf
       # ~/.vim: vim
       # ~/.vimrc: vimrc
 
