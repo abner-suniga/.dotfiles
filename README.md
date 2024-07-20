@@ -4,8 +4,6 @@ This might be one of my longest projects. The goal is to centralize all my dotfi
 
 ## Manual settings
 
-Some settings I don't know how to automate yet
-
 ### [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ### Iterm2
@@ -25,7 +23,7 @@ Some settings I don't know how to automate yet
 2. Import and apply gruvbox.itermcolors (change the cursor color, it's to dark)
 ```
 
-### [Install a nerd font](https://www.nerdfonts.com/font-downloads)
+#### [Install a nerd font](https://www.nerdfonts.com/font-downloads)
 
 ```
 1. Search for Fantasque Sans Mono
