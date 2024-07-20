@@ -25,7 +25,7 @@ This might be one of my longest projects. The goal is to centralize all my dotfi
 #### [Install the gruvbox theme](https://github.com/herrbischoff/iterm2-gruvbox)
 
 1. Go to iTerm2 > Settings > Profiles > Colors > Color Presets > Import
-2. Import and apply gruvbox.itermcolors (change the cursor color, it's to dark)
+2. Import and apply `gruvbox.itermcolors` (change the cursor color, it's too dark)
 
 #### [Install a nerd font](https://www.nerdfonts.com/font-downloads)
 
