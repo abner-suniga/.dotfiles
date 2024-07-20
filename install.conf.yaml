@@ -34,6 +34,21 @@
     stdout: true
     stderr: true
   - 
+    command: ./nvm_install.zsh
+    description: Installing NVM
+    stdout: true
+    stderr: true
+  - 
+    command: ./npmpackages_install.zsh
+    description: Installing NVM
+    stdout: true
+    stderr: true
+  - 
+    command: ./vimplug_install.zsh
+    description: Installing Vim plug
+    stdout: true
+    stderr: true
+  - 
     command: brew bundle --verbose
     description: Installing applications with Homebrew
     stdout: true

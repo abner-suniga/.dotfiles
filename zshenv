@@ -5,3 +5,7 @@ function xexists() {
 function dexists() {
   [ -d $1 ]
 }
+
+function fexists() {
+  [ -f $1 ]
+}
