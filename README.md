@@ -2,6 +2,10 @@
 
 This might be one of my longest projects. The goal is to centralize all my dotfiles and make a new system install as easy as possible. 
 
+xcode-select --install
+
+git clone https://github.com/abner-suniga/.dotfiles.git
+
 ## Manual settings
 
 ### [Docker](https://docs.docker.com/desktop/install/mac-install/)

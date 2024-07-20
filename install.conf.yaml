@@ -23,33 +23,28 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - 
-    command: ./ohmyzsh_install.zsh
+  - command: ./ohmyzsh_install.zsh
     description: Installing oh my zsh
     stdout: true
     stderr: true
-  - 
-    command: ./homebrew_install.zsh
+  - command: ./homebrew_install.zsh
     description: Installing Homebrew
+    stdin: true
     stdout: true
     stderr: true
-  - 
-    command: ./nvm_install.zsh
+  - command: ./nvm_install.zsh
     description: Installing NVM
     stdout: true
     stderr: true
-  - 
-    command: ./npmpackages_install.zsh
+  - command: ./npmpackages_install.zsh
     description: Installing NVM
     stdout: true
     stderr: true
-  - 
-    command: ./vimplug_install.zsh
+  - command: ./vimplug_install.zsh
     description: Installing Vim plug
     stdout: true
     stderr: true
-  - 
-    command: brew bundle --verbose
+  - command: brew bundle --verbose
     description: Installing applications with Homebrew
     stdout: true
     stderr: true
