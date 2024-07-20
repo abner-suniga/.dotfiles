@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if dexists ~/.oh-my-zsh; then
+if dexists ~/.oh-my-zsh/.git; then
   echo "Oh my zsh exists, skipping the install"
 else 
   echo "Installing oh my zsh"

@@ -8,6 +8,10 @@ git clone https://github.com/abner-suniga/.dotfiles.git
 
 ## Manual settings
 
+### NVIM
+
+:PlugInstall
+
 ### [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ### Iterm2
