@@ -7,6 +7,7 @@
 - link:
       ~/.zshrc:
       ~/.zshenv:
+      ~/.zprofile:
       ~/.gitconfig:
       ~/.config/nvim:
         create: true
