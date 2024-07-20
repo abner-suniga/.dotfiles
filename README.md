@@ -3,14 +3,15 @@
 This might be one of my longest projects. The goal is to centralize all my dotfiles and make a new system install as easy as possible. 
 
 1. Install xcode: `xcode-select --install`
-2. Clone my .dotfiles repo: `git clone https://github.com/abner-suniga/.dotfiles.git`
+2. Clone the repo: `git clone https://github.com/abner-suniga/.dotfiles.git`
 3. Run install `cd .dotfiles && ./install`
 
 ## Manual settings
 
 ### NVIM setup
 
-1. Run `:PlugInstall`
+1. Open nvim `nvim`
+2. Run `:PlugInstall`
 
 ### [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
