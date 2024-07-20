@@ -18,6 +18,14 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  -
+  - 
     command: ./homebrew.zsh
+    description: Installing applications with Homebrew
     stdout: true
+    stderr: true
+  - 
+    command: brew bundle --verbose
+    description: Installing applications with Homebrew
+    stdout: true
+    stderr: true
+
