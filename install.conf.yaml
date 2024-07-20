@@ -8,21 +8,23 @@
       ~/.zshrc:
         force: true
       ~/.zshenv:
+        force: true
       ~/.zprofile:
+        force: true
       ~/.gitconfig:
+        force: true
       ~/.config/nvim:
+        force: true
         create: true
         path: config/nvim
       ~/.fzf.zsh:
-      ~/.tmux.conf: tmux.conf
-      ~/.oh-my-zsh/custom: # when the link is created?
+        force: true
+      ~/.tmux.conf: 
+        force: true
+      ~/.oh-my-zsh/custom: 
         force: true
         create: false
         path: oh-my-zsh/custom
-
-
-- create:
-  - ~/repositories
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
