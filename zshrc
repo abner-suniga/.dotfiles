@@ -9,6 +9,8 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export LANG=en_US.UTF-8
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 export BAT_THEME="gruvbox-dark"
