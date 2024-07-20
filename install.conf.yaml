@@ -6,6 +6,7 @@
 
 - link:
       ~/.zshrc:
+        force: true
       ~/.zshenv:
       ~/.zprofile:
       ~/.gitconfig:
