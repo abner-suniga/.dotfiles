@@ -1,5 +1,8 @@
+--------------------------------------------------------------------------------
+--------------------------------- Plugins --------------------------------------
+--------------------------------------------------------------------------------
 local vim = vim
-local Plug = vim.fn['plug#'] -- using vim plug plugin manager
+local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
@@ -20,11 +23,15 @@ vim.call('plug#end')
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
-vim.g.mapleader = " " -- leader key
+-- leader key
+vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 
 local utils = require('utils')
 
+--------------------------------------------------------------------------------
+--------------------------------- Keymaps --------------------------------------
+--------------------------------------------------------------------------------
 vim.keymap.set("n", "<leader>n", utils.toggle_netrw)
 
 vim.keymap.set("n", "<leader>ff", ':Files<cr>')
@@ -39,6 +46,10 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<C-l>', ':nohlsearch<CR>')
 vim.keymap.set('x', '<leader>p', '\"_dP')
+
+--------------------------------------------------------------------------------
+--------------------------------- Options --------------------------------------
+--------------------------------------------------------------------------------
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -61,6 +72,10 @@ vim.opt.updatetime = 50
 vim.wo.foldcolumn = '2'
 vim.wo.signcolumn = 'yes:2'
 
+--------------------------------------------------------------------------------
+--------------------------------- Treesitter -----------------------------------
+--------------------------------------------------------------------------------
+
 require('nvim-treesitter.configs').setup({
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "javascript", "typescript" },
   sync_install = false,
@@ -71,6 +86,10 @@ require('nvim-treesitter.configs').setup({
     additional_vim_regex_highlighting = false,
   },
 })
+
+--------------------------------------------------------------------------------
+------------------------------------ LSP ---------------------------------------
+--------------------------------------------------------------------------------
 
 local lsp_zero = require('lsp-zero')
 
@@ -87,9 +106,14 @@ lsp_zero.set_sign_icons({
 
 local lsp_config = require('lspconfig')
 
+-- setup language servers
 lsp_config.tsserver.setup({})
 lsp_config.lua_ls.setup({})
 lsp_config.eslint.setup({})
+
+--------------------------------------------------------------------------------
+-------------------------------- Formatters ------------------------------------
+--------------------------------------------------------------------------------
 
 require("conform").setup({
   formatters_by_ft = {
@@ -108,6 +132,10 @@ require("conform").setup({
     lsp_format = "fallback",
   },
 })
+
+--------------------------------------------------------------------------------
+------------------------------ Autocompletion ----------------------------------
+--------------------------------------------------------------------------------
 
 local cmp = require('cmp')
 
@@ -138,5 +166,9 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   },
 })
+
+--------------------------------------------------------------------------------
+-------------------------------- Autopairs -------------------------------------
+--------------------------------------------------------------------------------
 
 require("nvim-autopairs").setup({})
