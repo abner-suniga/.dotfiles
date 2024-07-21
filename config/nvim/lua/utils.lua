@@ -6,6 +6,22 @@ local function toggle_netrw()
   end
 end
 
+local function toggle_quickfix()
+  local qf_exists = false
+  for _, win in pairs(vim.fn.getwininfo()) do
+    if win.quickfix == 1 then
+      qf_exists = true
+    end
+  end
+
+  if qf_exists then
+    vim.cmd('cclose')
+  else
+    vim.cmd('copen')
+  end
+end
+
 return {
-  toggle_netrw = toggle_netrw
+  toggle_netrw = toggle_netrw,
+  toggle_quickfix = toggle_quickfix
 }

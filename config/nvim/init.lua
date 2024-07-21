@@ -47,8 +47,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 
 vim.keymap.set('n', '<C-l>', ':nohlsearch<CR>')
 vim.keymap.set('x', '<leader>p', '\"_dP')
@@ -56,6 +56,7 @@ vim.keymap.set('x', '<leader>p', '\"_dP')
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+vim.keymap.set('n', "<leader>q", utils.toggle_quickfix)
 --------------------------------------------------------------------------------
 --------------------------------- Options --------------------------------------
 --------------------------------------------------------------------------------
