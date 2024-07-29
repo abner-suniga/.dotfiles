@@ -87,7 +87,17 @@ vim.wo.signcolumn = 'yes:2'
 --------------------------------------------------------------------------------
 
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "javascript", "typescript" },
+  ensure_installed = {
+    "c",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+    "markdown",
+    "markdown_inline",
+    "javascript",
+    "typescript"
+  },
   sync_install = false,
   auto_install = true,
   highlight = {
