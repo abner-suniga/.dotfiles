@@ -17,6 +17,7 @@ Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x' })        -- lsp
 Plug('stevearc/conform.nvim')                                     -- formatters
 Plug('windwp/nvim-autopairs')                                     -- autopair
 Plug('ellisonleao/gruvbox.nvim')                                  -- theme
+-- Plug('supermaven-inc/supermaven-nvim')                            -- LLMs?
 
 vim.call('plug#end')
 
@@ -79,8 +80,8 @@ vim.opt.relativenumber = true
 
 vim.opt.updatetime = 50
 
-vim.wo.foldcolumn = '2'
-vim.wo.signcolumn = 'yes:2'
+-- vim.wo.foldcolumn = '2'
+-- vim.wo.signcolumn = 'yes:2'
 
 --------------------------------------------------------------------------------
 --------------------------------- Treesitter -----------------------------------
@@ -127,9 +128,12 @@ lsp_zero.set_sign_icons({
 local lsp_config = require('lspconfig')
 
 -- setup language servers
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lsp_config.tsserver.setup({})
 lsp_config.lua_ls.setup({})
 lsp_config.eslint.setup({})
+lsp_config.clangd.setup({})
+lsp_config.csharp_ls.setup({})
 
 --------------------------------------------------------------------------------
 -------------------------------- Formatters ------------------------------------
@@ -165,7 +169,8 @@ cmp.setup({
     completeopt = 'menu,menuone,noinsert'
   },
   mapping = {
-    ['<cr>'] = cmp.mapping.confirm({ select = false }),
+    -- ['<cr>'] = cmp.mapping.confirm({ select = false }),
+    ['<C-y>'] = cmp.mapping.confirm({ select = false }),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<Up>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
     ['<Down>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
@@ -185,6 +190,9 @@ cmp.setup({
     end),
     ['<C-Space>'] = cmp.mapping.complete(),
   },
+  sources = {
+    { name = 'nvim_lsp' },
+  }
 })
 
 --------------------------------------------------------------------------------
@@ -192,3 +200,14 @@ cmp.setup({
 --------------------------------------------------------------------------------
 
 require("nvim-autopairs").setup({})
+
+--------------------------------------------------------------------------------
+---------------------------------- LLMs ----------------------------------------
+--------------------------------------------------------------------------------
+
+-- require("supermaven-nvim").setup({
+--   ignore_filetypes = { cpp = true },
+--   disable_inline_completion = true,
+--   disable_keymaps = true
+-- })
+--

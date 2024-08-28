@@ -21,3 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
 
+
+# Created by `pipx` on 2024-07-30 13:19:22
+export PATH="$PATH:/Users/abnersuniga/.local/bin"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
