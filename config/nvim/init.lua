@@ -17,7 +17,7 @@ Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x' })        -- lsp
 Plug('stevearc/conform.nvim')                                     -- formatters
 Plug('windwp/nvim-autopairs')                                     -- autopair
 Plug('ellisonleao/gruvbox.nvim')                                  -- theme
--- Plug('supermaven-inc/supermaven-nvim')                            -- LLMs?
+Plug('github/copilot.vim')                                        -- llms
 
 vim.call('plug#end')
 
@@ -79,9 +79,6 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.updatetime = 50
-
--- vim.wo.foldcolumn = '2'
--- vim.wo.signcolumn = 'yes:2'
 
 --------------------------------------------------------------------------------
 --------------------------------- Treesitter -----------------------------------
@@ -204,10 +201,3 @@ require("nvim-autopairs").setup({})
 --------------------------------------------------------------------------------
 ---------------------------------- LLMs ----------------------------------------
 --------------------------------------------------------------------------------
-
--- require("supermaven-nvim").setup({
---   ignore_filetypes = { cpp = true },
---   disable_inline_completion = true,
---   disable_keymaps = true
--- })
---
